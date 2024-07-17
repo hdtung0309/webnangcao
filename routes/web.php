@@ -2,16 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get('/test-env', function () {
+    dd(env('DB_USERNAME'), config('database.connections.mysql.username'));
+});
 
 Route::get('/', function () {
     return view('welcome');

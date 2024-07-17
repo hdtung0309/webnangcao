@@ -28,6 +28,7 @@ class ClassController extends Controller
     public function index()
     {
         $classes = ClassModel::all();
+        dd($classes);
         return response()->json($classes);
     }
 
